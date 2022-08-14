@@ -8,14 +8,18 @@ metadata:
 spec:
   template:
     metadata:
-      name: my-first-pod
+      name: multi-pod
       labels:
-        app: myFirstPod
+        app: assignment1
         type: frontend
     spec:
       containers:
         - name: nginx
-          image: nginx
+          image: nginx:alpine
+        - name: redis
+          image: redis
+        - name: memcached
+          image: memcached
   replicas: 5
   selector:
     matchLabels:
