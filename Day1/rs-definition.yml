@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: replica-set
+  name: nginx-deploy
   labels:
-    app: myreplicaset
+    app: web
     kind: frontend
 spec:
   template:
     metadata:
-      name: multi-pod
+      name: web
       labels:
         app: assignment1
         type: frontend
@@ -16,11 +16,7 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
-        - name: redis
-          image: redis
-        - name: memcached
-          image: memcached
-  replicas: 5
+  replicas: 3
   selector:
     matchLabels:
       type: frontend
