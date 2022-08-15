@@ -9,8 +9,6 @@ spec:
   template:
     metadata:
       name: busybox-deployment
-      labels:
-        app: busybox
     spec:
       containers:
         - name: busybox
