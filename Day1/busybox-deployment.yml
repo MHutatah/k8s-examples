@@ -18,6 +18,7 @@ spec:
           image: busybox:latest
           command: ["/bin/sh"]
           args: ["sleep 3600"]
+      restartPolicy: Never
   replicas: 3
   selector:
     matchLabels:
