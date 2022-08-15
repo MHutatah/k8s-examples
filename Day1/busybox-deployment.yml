@@ -16,9 +16,11 @@ spec:
       containers:
         - name: busybox
           image: busybox:latest
-          command: ["/bin/sh"]
-          args: ["sleep 3600"]
-      restartPolicy: Never
+          args:
+            - /bin/sh
+            - -c
+            - sleep 3600
+
   replicas: 3
   selector:
     matchLabels:
