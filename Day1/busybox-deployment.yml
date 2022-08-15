@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   name: busybox-deployment
   labels:
-    app: busybox
+    app: busybox-deployment
     kind: VM
 spec:
   template:
     metadata:
-      name: busybox
+      name: busybox-deployment
       labels:
-        app: busybox
+        app: busybox-deployment
         type: VM
     spec:
       containers:
