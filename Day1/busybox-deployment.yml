@@ -9,6 +9,9 @@ spec:
   template:
     metadata:
       name: busybox
+      labels:
+        app: busybox
+        type: VM
     spec:
       containers:
         - name: busybox
